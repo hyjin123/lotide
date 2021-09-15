@@ -28,3 +28,7 @@ assertEqual(result["L"], 2);
 let result1 = countLetters("lighthouse in the house");
 assertEqual(result1["h"], 4);
 assertEqual(result1["e"], 3);
+
+let result2 = countLetters("yooo");
+assertEqual(result2["y"], 1);
+assertEqual(result2["o"], 3);
