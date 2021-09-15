@@ -1,6 +1,6 @@
 //Write a function that takes two arrays and returns true or false, based on match
 const eqArrays = function(array1, array2) {
-  //if the arrays are not the same length, display false
+  //if the arrays are not the same length, return false
   if (array1.length !== array2.length) {
     return false;
   }
