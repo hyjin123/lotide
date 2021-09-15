@@ -1,9 +1,5 @@
 //Write a function that takes two arrays and returns true or false, based on match
 const eqArrays = function(array1, array2) {
-  //if the arrays are not the same length, display false
-  if (array1.length !== array2.length) {
-    return false;
-  }
   //loop through the arrays assuming both arrays are same length
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
@@ -25,4 +21,26 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-assertArraysEqual([1,2,3],[1,2,3,4]);
+// TEST/ASSERTION FUNCTIONS
+const eqArrays = function(...) {
+  //...
+}
+
+const assertArraysEqual = function(actual, expected) {
+  //...
+}
+
+// ACTUAL FUNCTION
+const middle = function(array) {
+  //...
+}
+
+// TEST CODE
+// ...
+middle([1]) // => []
+middle([1, 2]) // => []
+middle([1, 2, 3]) // => [2]
+middle([1, 2, 3, 4, 5]) // => [3]
+middle([1, 2, 3, 4]) // => [2, 3]
+middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
+
