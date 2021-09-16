@@ -12,10 +12,12 @@ const assertEqual = function(actual, expected) {
 const countLetters = function(sentence) {
   let results = {};
   for (const item of sentence) {
-    if (results[item]) {
-      results[item] += 1;
-    } else {
-      results[item] = 1;
+    if (item !== " ") {
+      if (results[item]) {
+        results[item] += 1;
+      } else {
+        results[item] = 1;
+      }
     }
   }
   return results;
@@ -26,6 +28,7 @@ let result = countLetters("LHL");
 assertEqual(result["L"], 2);
 
 let result1 = countLetters("lighthouse in the house");
+console.log(result1);
 assertEqual(result1["h"], 4);
 assertEqual(result1["e"], 3);
 
