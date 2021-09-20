@@ -1,19 +1,4 @@
-//Write a function that takes two arrays and returns true or false, based on match
-const eqArrays = function(array1, array2) {
-  //if the arrays are not the same length, return false
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  //loop through the arrays assuming both arrays are same length
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      //if the array indexes don't match, return false
-      return false;
-    }
-  }
-  //if the array indexes are all the same, return true
-  return true;
-};
+const eqArrays = require("./eqArrays");
 
 //Implement a function that will take in two arrays and console.log correct message
 const assertArraysEqual = function(array1, array2) {
@@ -25,4 +10,4 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-assertArraysEqual([1,2,3,4],[1,2,3,4,5]);
+module.exports = assertArraysEqual;
