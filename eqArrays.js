@@ -1,5 +1,3 @@
-const assertEqual = require("./assertEqual");
-
 //Write a function that takes two arrays and returns true or false, based on match
 const eqArrays = function(array1, array2) {
   //if the arrays are not the same length, return false
