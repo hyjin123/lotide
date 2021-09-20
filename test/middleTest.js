@@ -1,21 +1,20 @@
 const middle = require('../middle');
-const assertArraysEqual = require('../assertArraysEqual');
+const assert = require('chai').assert;
 
-// TEST 
-// ...
-middle([1]) // => []
-middle([1, 2]) // => []
-middle([1, 2, 3]) // => [2]
-middle([1, 2, 3, 4, 5]) // => [3]
-middle([1, 2, 3, 4]) // => [2, 3]
-middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
-middle([1, 2, 3, 4, 5, 6, 7]) // => [4]
-middle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) // => [6, 7]
+describe("#middle", () => {
+  it("it should return empty array if array length is 1", () => {
+    assert.deepEqual(middle([1]), []);
+  });
 
-//should all pass
-assertArraysEqual(middle([1]), []); 
-assertArraysEqual(middle([1, 2]), []);
-assertArraysEqual(middle([1, 2, 3]), [2]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+  it("it should return empty array if array length is 2", () => {
+    assert.deepEqual(middle([1, 2]), []);
+  });
+
+  it("it should [2] if array is [1,2,3]", () => {
+    assert.deepEqual(middle([1, 2, 3]), [2]);
+  });
+
+  it("it should [3,4] if array is [1,2,3,4,5,6]", () => {
+    assert.deepEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+  });
+})
