@@ -13,6 +13,8 @@ const assertEqual = function(actual, expected) {
 const findKey = (object, callBack) => {
   //loop through the object
   for (const item in object) {
+    //pass the object[item] in the callback function and if true, return item
+    //ex. if({stars:1}.stars === 2) { return item;}
     if (callBack(object[item])) {
       return item;
     }
@@ -28,7 +30,7 @@ findKey({
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
-}, x => x.stars === 2) // )=> "noma"
+}, x => x.stars === 2) // )=> "Ora"
 
 assertEqual(findKey({
   "Blue Hill": { stars: 1 },
@@ -45,7 +47,6 @@ let users = {
   "pebbles": {"age": 1, "active": true}
 };
 
-const result = findKey(users, x => x.age < 40);
-console.log(result);
-assertEqual(result, "barney");
+const result = findKey(users, x => x.age < 36);
+assertEqual(result, "pebbles");
 
