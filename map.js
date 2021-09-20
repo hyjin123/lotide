@@ -35,12 +35,15 @@ const map = (array, callback) => {
   return results;
 }
 
-const result = map(words, word => word[0]);
-const result1 = map(words, word => word[1]);
-const result2 = map(words, word => word.length);
-const result3 = map(words, word => word.toUpperCase());
+module.exports = map;
 
-assertArraysEqual(result, ["g", "c", "t", "m", "t"]);
-assertArraysEqual(result1, ["r", "o", "o", "a", "o"]);
-assertArraysEqual(result2, [6, 7, 2, 5, 3]);
-assertArraysEqual(result3, ["GROUND", "CONTROL", "TO", "MAJOR", "TOM"]);
+// TEST CODE
+// const result = map(words, word => word[0]);
+// const result1 = map(words, word => word[1]);
+// const result2 = map(words, word => word.length);
+// const result3 = map(words, word => word.toUpperCase());
+
+// assertArraysEqual(result, ["g", "c", "t", "m", "t"]);
+// assertArraysEqual(result1, ["r", "o", "o", "a", "o"]);
+// assertArraysEqual(result2, [6, 7, 2, 5, 3]);
+// assertArraysEqual(result3, ["GROUND", "CONTROL", "TO", "MAJOR", "TOM"]);

@@ -39,15 +39,17 @@ const letterPositions = function (sentence) {
   return (results);
 };
 
-//TEST -- should pass
-let result = letterPositions("hello");
-assertArraysEqual(result["h"], [0]);
-assertArraysEqual(result["e"], [1]);
-assertArraysEqual(result["l"], [2, 3]);
-assertArraysEqual(result["o"], [4]);
+module.exports = letterPositions;
 
-let result1 = letterPositions("lighthouse in the house");
-assertArraysEqual(result1["l"], [0]);
-assertArraysEqual(result1["i"], [1, 11]);
-assertArraysEqual(result1["g"], [2]);
-assertArraysEqual(result1["h"], [3, 5, 15, 18]);
+//TEST -- should pass
+// let result = letterPositions("hello");
+// assertArraysEqual(result["h"], [0]);
+// assertArraysEqual(result["e"], [1]);
+// assertArraysEqual(result["l"], [2, 3]);
+// assertArraysEqual(result["o"], [4]);
+
+// let result1 = letterPositions("lighthouse in the house");
+// assertArraysEqual(result1["l"], [0]);
+// assertArraysEqual(result1["i"], [1, 11]);
+// assertArraysEqual(result1["g"], [2]);
+// assertArraysEqual(result1["h"], [3, 5, 15, 18]);
